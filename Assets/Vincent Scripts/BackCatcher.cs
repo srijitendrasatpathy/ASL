@@ -1,0 +1,22 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BackCatcher : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		//Closing the application when the back button is being pressed.
+		if(Application.platform == RuntimePlatform.Android){
+			if(Input.GetKeyUp(KeyCode.Escape)){
+				Application.Quit();
+				return;
+			}
+		}	
+	}
+}
